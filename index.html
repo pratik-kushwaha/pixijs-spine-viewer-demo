@@ -1,0 +1,53 @@
+<!DOCTYPE html><script type=importmap>{"imports":{"2JX1S":"./dist.33fad0e5.js","4LfTz":"./gear_icon.fcdc5415.png","9cv6h":"./loader-uni.4d30e26a.js","c4oa4":"./runtime-3.8.88aff1b5.js","dijJx":"./base.b8d0ad55.js","f3sXY":"./runtime-4.1.60c83818.js","g8sU2":"./spineboy.1a9ac20f.atlas","jx9cX":"./spineboy.8f7a016d.png"}}</script><title>PIXIjs Spine Viewer</title><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel=stylesheet><style>:root{--primary-color:#3d3d3d;--secondary-color:#5f5f5f}p,label{color:#fff}.list-group-item.event-triggered{color:#fff;background-color:#4aa3ff}.list-group-item{transition:background-color .6s ease-out,color .6s ease-out}.rating-spinner{border:2px solid #ffffff40;border-top-color:#ffc107;border-radius:50%;flex:0 0 14px;width:14px;height:14px;animation:.8s linear infinite rating-spin}@keyframes rating-spin{to{transform:rotate(360deg)}}#drop-overlay{z-index:1040;background-color:#1f1f1f;justify-content:center;align-items:center;display:flex;position:fixed;inset:0}#drop-zone{border:2px dashed var(--secondary-color);text-align:center;background-color:var(--primary-color);border-radius:12px;flex-direction:column;align-items:center;gap:8px;max-width:min(90vw,560px);padding:56px 72px;font-family:Arial,sans-serif;display:flex}#drop-zone.highlight{background-color:#34404d;border-color:#4aa3ff}.drop-zone-title{margin:0;font-size:20px}.drop-zone-hint{color:#aaa;margin:0 0 12px;font-size:13px}.drop-zone-actions{flex-wrap:wrap;justify-content:center;gap:10px;display:flex}.add-more-btn{width:calc(100% - 10px);margin:6px 5px;display:block}.spine-remove-btn{color:#b0b0b0;cursor:pointer;border-radius:3px;flex:none;margin-left:8px;font-size:16px;line-height:1}.spine-remove-btn:hover{color:#fff;background-color:#c0392b}.spines-drop-highlight{outline-offset:-2px;background-color:#34404d;border-radius:4px;outline:2px dashed #4aa3ff}html,body{margin:0;padding:0;overflow:hidden}#app-container{height:100vh;display:flex}#menu-left,#menu-right{background-color:var(--primary-color);flex-shrink:0;width:200px}#pixi-app{background-color:#000;flex:1;min-width:0;min-height:0;position:relative;overflow:hidden}#select-spine-hint{z-index:10;color:#fff;white-space:nowrap;pointer-events:none;background-color:#1e1e1ed9;border:1px solid #555;border-radius:20px;align-items:center;gap:10px;padding:8px 14px;font-family:Arial,sans-serif;font-size:14px;display:flex;position:absolute;right:16px}#select-spine-hint .material-icons{color:#4aa3ff;font-size:18px;animation:1s ease-in-out infinite hint-nudge}@keyframes hint-nudge{0%,to{transform:translate(0)}50%{transform:translate(6px)}}#bottom-buttons{flex-direction:column;align-items:flex-end;gap:8px;padding:10px;display:flex;position:absolute;bottom:74px;right:200px}#timeline{width:0;height:74px;position:absolute;bottom:0;left:0;overflow:hidden}.timeline-bar{box-sizing:border-box;background-color:var(--primary-color);border-top:1px solid #555;align-items:stretch;gap:6px;height:100%;padding:6px 8px;display:flex}.timeline-btn{color:#fff;background-color:var(--secondary-color);cursor:pointer;border:none;border-radius:4px;flex:none;justify-content:center;align-items:center;width:34px;display:flex}.timeline-btn:hover{background-color:#6f6f6f}.timeline-btn.is-active{color:#fff;background-color:#4aa3ff}.timeline-btn.is-active:hover{background-color:#5cb0ff}.timeline-canvas-wrap{background-color:#2b2b2b;border-radius:4px;flex:1 1 0;min-width:0}.timeline-canvas{touch-action:none;cursor:pointer;width:100%;height:100%;display:block}.timeline-side{flex-direction:column;flex:none;justify-content:center;gap:4px;display:flex}.timeline-readout{box-sizing:border-box;color:#ddd;white-space:pre;flex:none;align-items:center;padding:0 10px;font-family:Consolas,monospace;font-size:12px;display:flex}.timeline-speed{box-sizing:border-box;align-items:center;gap:8px;padding:0 10px;font-family:Consolas,monospace;font-size:12px;display:flex}.timeline-speed-title{color:#888}.timeline-speed-slider{accent-color:#4aa3ff;cursor:pointer;flex:auto;width:120px}.timeline-speed-label{text-align:right;color:#ddd;white-space:pre;flex:none;min-width:46px}.timeline-event-tooltip{z-index:1000;pointer-events:none;color:#1a1a1a;white-space:nowrap;background-color:#f5a623;border-radius:4px;padding:3px 7px;font-family:Consolas,monospace;font-size:12px;position:fixed;transform:translate(-50%,-100%);box-shadow:0 2px 6px #0006}#bottom-buttons button{margin-left:10px}#bottom-buttons button.is-disabled{opacity:.65;cursor:not-allowed}.video-preview-backdrop{z-index:1080;background-color:#0009;justify-content:center;align-items:center;display:flex;position:fixed;inset:0}.video-preview-dialog{background-color:var(--primary-color);border:1px solid #555;border-radius:8px;flex-direction:column;max-width:min(90vw,900px);max-height:90vh;display:flex;overflow:hidden;box-shadow:0 12px 40px #00000080}.video-preview-header{background-color:var(--secondary-color);justify-content:space-between;align-items:center;gap:12px;padding:10px 14px;display:flex}.video-preview-title{color:#fff;text-overflow:ellipsis;white-space:nowrap;margin:0;font-family:Arial,sans-serif;font-size:14px;overflow:hidden}.video-preview-close{color:#fff;cursor:pointer;background:0 0;border:none;border-radius:4px;flex:none;justify-content:center;align-items:center;width:30px;height:30px;display:flex}.video-preview-close:hover{background-color:#ffffff26}.video-preview-body{background-color:#000;min-height:0;padding:14px;display:flex}.video-preview-video{background-color:#000;max-width:100%;max-height:calc(90vh - 130px);margin:auto;display:block}.video-preview-footer{background-color:var(--primary-color);border-top:1px solid #555;justify-content:flex-end;padding:10px 14px;display:flex}.rounded-quad{cursor:pointer;background-color:#0000;border-radius:10px;justify-content:center;align-items:center;width:40px;height:40px;display:flex;position:fixed;bottom:20px;right:20px}.git-logo{object-fit:contain;width:50px;height:50px}#beta-banner{z-index:1050;color:#1a1a1a;background-color:#f5a623;border-radius:16px;align-items:center;gap:6px;padding:6px 12px;font-family:Arial,sans-serif;font-size:13px;font-weight:700;text-decoration:none;display:flex;position:fixed;top:10px;right:10px;box-shadow:0 2px 8px #0006}#beta-banner:hover{color:#1a1a1a;background-color:#ffb733}</style><body>
+    <div id=drop-overlay>
+      
+      <a id=beta-banner href=https://pratik-kushwaha.github.io/pixijs-spine-viewer-beta/ target=_blank rel=noopener title="Open the beta build (animation + sound features under test)">
+        🧪 Try the Beta
+      </a>
+      
+      <div id=drop-zone>
+        <p class=drop-zone-title>Drag &amp; drop your Spine files here</p>
+        <p class=drop-zone-hint>
+          Needs a *.json (or *.spine-json), a *.atlas and its image files
+          (webp, png, jpg)
+        </p>
+        <div class=drop-zone-actions>
+          <button id=upload-btn class="btn btn-light">Choose files</button>
+          <button id=load-spineboy class="btn btn-outline-light">
+            Load SpineBoy example
+          </button>
+        </div>
+        <input type=file id=file-input multiple style=display:none accept=.atlas,.json,.spine-json,.webp,.png,.jpg,.jpeg>
+      </div>
+    </div>
+    <div id=app-container>
+      <div id=menu-left>
+        
+      </div>
+
+      <div id=pixi-app></div>
+
+      <div id=menu-right>
+        
+      </div>
+      <div id=bottom-buttons>
+        <button id=export-video type=button class="btn btn-light" title="To export video correctly the animation pivot should be centered.">
+          Export video
+        </button>
+        <button id=recenter type=button class="btn btn-light">
+          Reset view
+        </button>
+      </div>
+      <div id=timeline>
+        
+      </div>
+    </div>
+    <div class=rounded-quad style=display:none>
+      <a href=_paste_git_url_here_>
+        <img class=git-logo src=logo.d6786b3c.png alt="Git repo logo">
+      </a>
+    </div>
+    <script type=module src=pixijs-spine-viewer.9791fbae.js></script>
+    <script src=https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js></script>
+  
+
